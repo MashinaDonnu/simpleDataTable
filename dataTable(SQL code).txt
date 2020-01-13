@@ -1,0 +1,93 @@
+-- phpMyAdmin SQL Dump
+-- version 4.8.5
+-- https://www.phpmyadmin.net/
+--
+-- Хост: 127.0.0.1:3306
+-- Время создания: Янв 13 2020 г., 16:20
+-- Версия сервера: 10.3.13-MariaDB
+-- Версия PHP: 7.1.22
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- База данных: `study`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `eshop`
+--
+
+CREATE TABLE `eshop` (
+  `id` int(11) NOT NULL,
+  `goods` varchar(500) NOT NULL,
+  `price` double NOT NULL,
+  `amount` int(11) NOT NULL,
+  `country` varchar(100) NOT NULL,
+  `1c_articul` varchar(100) NOT NULL,
+  `time_add` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `eshop`
+--
+
+INSERT INTO `eshop` (`id`, `goods`, `price`, `amount`, `country`, `1c_articul`, `time_add`) VALUES
+(20, 'Banana', 22, 222, 'Украина', 'd3dd2324', 1540015414),
+(23, 'Капуста', 45.3, 84652, 'Ukraine', '6125d3d2ba', 1540015635),
+(24, 'Морковь', 31, 26548, 'Belarus', 'c6cb678b45', 1530015745),
+(26, 'Гранат', 107.4, 5344, 'Georgia', '2a873db0d9', 1540112786),
+(27, 'Помидоры', 13.4, 93544, 'Ukraine', '80c43c7095', 1512315786),
+(28, 'Манго', 137.8, 16794, 'Uganda', '71b67d51c7', 1530115786),
+(29, 'Киви', 254.2, 3544, 'Brasil', '3ada0789c6', 1540001786),
+(30, 'Страусинные яйца', 127.8, 342, 'Belarus', '04dc07014b', 1512015786),
+(31, 'Огурцы', 12.2, 21344, 'Ukraine', '6a86c2dd2a', 1540000286),
+(33, 'Кумыс', 32.1, 5344, 'Kazakhstan', '87026b106c', 1540000486),
+(34, 'Баранина', 125.1, 1247, 'Kazakhstan', '0cb257c67b', 1522015786),
+(37, 'Свити', 334, 567, 'Италия', 'апкапавп43332к44а3', 2147483641),
+(38, 'Свити карликовый', 334, 567, 'Италия', 'апкапавп43332к44а3', 2147483641),
+(39, 'beet', 33, 22, 'Украина', '154001fscs', 1540015476),
+(48, 'granate', 334, 555, 'Украина', 'd34d4434d3d34', 1540112786),
+(49, 'potato', 334, 555, 'Украина', 'd34d4434d3d34', 1540112786),
+(51, 'tykva', 33, 135, 'Ukrkaine', 'dnf4d43i3', 2147283341),
+(52, 'burak', 44, 3333, 'Украина', 'f59f4j5', 1147483641),
+(55, 'Kukurudza', 444, 22212, 'Украина', '332s23dd', 1540005786),
+(58, 'Green apple', 34.6, 543543, 'Украина', 'd443d45g4k1', 1147483641),
+(59, 'Carrot', 78.2, 445, 'Украина', '0l3h5887n', 1147483641),
+(60, 'Cherry', 55.2, 9987, 'Украина', 'j2j4k5o30l', 1512315786),
+(61, 'Grape', 99.5, 7765, 'Украина', 'k9k3k4j5rh', 1540015476);
+
+--
+-- Индексы сохранённых таблиц
+--
+
+--
+-- Индексы таблицы `eshop`
+--
+ALTER TABLE `eshop`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT для сохранённых таблиц
+--
+
+--
+-- AUTO_INCREMENT для таблицы `eshop`
+--
+ALTER TABLE `eshop`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

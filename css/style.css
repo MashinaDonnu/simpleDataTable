@@ -1,0 +1,335 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    padding: 30px;
+    color: rgb(97, 93, 93);
+    font-size: 40px;
+    text-align: center;
+}
+
+/* -------------auxiliary classes ---------- */
+.active{
+    background: rgb(255, 196, 119);
+    border: 1px solid rgb(248, 80, 38);
+}
+.hide{
+    display: none;
+}
+
+
+/* ---------------- table wrapper styles --------------- */
+.wrapp{
+    margin: 0 auto;
+    width: 90%;
+}
+.table-wrapp{
+    padding: 10px;
+    width: 900px;
+    margin: 100px auto;
+}
+
+
+/* -------------- sort, search btns styles ----------- */
+.search{
+    text-align: right;
+    padding: 10px 0;
+    float: left;
+    width: 50%;
+}
+.sort{
+    text-align: left;
+    padding: 10px 0;
+    float: left;
+    width: 50%;
+}
+.sort-search-wrapp::after{
+    content: "";
+    display: block;
+    width: 100%;
+    clear: both;
+}
+
+#btn-sort,#btn-search{
+    padding: 5px;
+    border-radius: 5px;
+    border-bottom: 1px solid black;
+    transition: all ease 0.5s;
+    cursor: pointer;
+}
+#btn-sort:hover,#btn-search:hover{
+    border-bottom: 2px solid black;
+    background: rgb(235, 233, 233);
+}
+
+/* ---------------- pagination styles ---------------- */
+.pagination{
+    margin-top: 20px;
+    float: left;
+}
+.pagination ul{
+    float: left;
+    width: 300px;
+    transition: all ease 0.5s;
+}
+.pagination ul:after{
+    content: "";
+    width: 100%;
+    display: block;
+    clear: both;
+}
+.pagination ul li {
+    padding: 10px;
+    float: left;
+    list-style: none;
+    margin-left: 10px;
+    transition: 0.5s;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+.pagination ul li:hover{
+    background: rgb(245, 217, 166);
+    border: 1px solid rgb(252, 126, 68);
+    box-sizing: border-box;
+
+}
+.limit{
+    float: left;
+    width: 210px;
+    overflow: hidden;
+}
+.pag-btn{
+    float: left;
+}
+#next,#prev{
+    padding: 2px;
+    font-size: 20px;
+    transition: all ease 0.5s;
+    border-radius: 4px;
+    cursor: pointer;
+} 
+
+#prev:hover,#next:hover{
+    background: rgb(248, 217, 171);
+}
+
+#next img,#prev img{
+    width: 30px;
+}
+
+/* ---------------- table styles ------------- */
+#my-table{
+    width: 100%;
+    border-top:2px solid rgb(83, 81, 81)  ;
+    padding: 10px;
+    text-align: center;
+}
+
+#my-table> tbody> tr{
+    padding: 50px;
+    border: 2px solid black;
+    
+}
+#my-table> tbody> tr:nth-child(2n+1){
+    background: rgb(248, 223, 202);
+}
+
+#my-table> tbody> tr:nth-child(2n){
+    background: rgba(253, 220, 193, 0.1);
+}
+
+
+#my-table th{
+    padding: 12px;
+}
+#my-table td{
+    padding: 10px;
+    border-bottom: 1px solid rgb(216, 180, 146);
+}
+
+
+/* ----------------- modal window styles --------------------- */
+.modal-wrapp{
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background: rgba(22, 22, 22, 0.3);
+    text-align: center;
+}
+
+.modal{
+    transition: all ease 0.5s; 
+    width: 470px;
+    height: 650px;
+    border: 1px solid rgb(116, 110, 110);
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-top: 70px;
+    position: relative;
+    background: rgb(252, 245, 237);
+    animation: modalAnimationOpen 0.3s;
+    position: relative;
+}
+
+/* animation for modal window */
+@keyframes modalAnimationOpen{
+    0%{transform: scale(0.0001);}
+    10%{transform: scale(0.0005);}
+    20%{transform: scale(0.001);}
+    30%{transform: scale(0.005);}
+    40%{transform: scale(0.01);}
+    50%{transform: scale(0.03);}
+    60%{transform: scale(0.06);}
+    70%{transform: scale(0.09);}
+    80%{transform: scale(0.2);}
+    90%{transform: scale(0.6);}
+    100%{transform: scale(1);}
+}
+
+.input-wrapper{
+    width: 80%;
+
+}
+
+.modal .input-wrapper div{
+    text-align: right;
+}
+
+.modal .modal-header h2 {
+    padding: 20px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom: 2px solid rgb(160, 156, 156);
+    background: rgb(253, 225, 171);
+    text-align: center;
+}
+
+.modal div>input{
+    margin-top: 20px;
+    height: 30px;
+    width: 250px;
+    font-size: 18px;
+}
+
+.btn-wrapp{
+    margin-top: 70px;
+    text-align: center;
+}
+
+#btn-add,#btn-create{
+    padding: 10px;
+    width: 150px;
+    border: 1px solid  rgb(240, 176, 116);
+    background: rgb(236, 223, 178);
+    font-size: 20px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+#btn-add:hover,#btn-create:hover{
+    background: rgb(248, 100, 31);
+}
+
+.btn-close{
+    border-radius: 50%;
+    padding: 10px 15px;
+    background: rgb(241, 56, 56);
+    font-weight: bold;
+    position: absolute;
+    right: -10px;
+    top: -15px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+.btn-close:hover{
+    background: rgb(180, 6, 6);
+}
+
+
+
+#add,#create,#delete{
+    margin-top: 20px;
+    width: 150px;
+    height: 40px;
+    border: 1px solid rgb(243, 117, 86);
+    background: rgb(245, 206, 123);
+    font-size: 18px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+#create{
+    background: rgb(248, 146, 30);
+}
+#delete{
+    background: rgb(252, 62, 29);
+}
+#delete:hover{
+    background: rgb(248, 2, 2);
+}
+#add:hover{
+    background: rgb(243, 141, 73);
+}
+#create:hover{
+    background: rgb(252, 108, 64);
+}
+.add-div,.create-div,.delete-div{
+    float: left;
+    position: absolute;
+    right: 0;
+}
+.create-div{
+    right: 180px;
+}
+.delete-div{
+    right: 360px;
+}
+
+.modal-footer{
+    padding: 35px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top: 2px solid rgb(160, 156, 156);
+    background: rgb(253, 225, 171);
+    width: 85%;
+    position: absolute;
+    bottom: 0;
+}
+
+
+
+/* --------------- chips styles --------------- */
+
+.panel{
+    position: relative;
+}
+.panel:after{
+    content: "";
+    display: block;
+    width: 100%;
+    clear: both;
+}
+
+.chips-wrapp{
+    position: fixed;
+    width: 400px;
+    padding: 10px;
+    right: 0;
+    top: 30px;
+}
+
+.chips-item{
+    padding: 12px;
+    opacity: 0.8;
+    color: #fff;
+    width: 300px;
+    margin-top: 40px;
+    border-radius: 10px;
+    text-align: center;
+}
+

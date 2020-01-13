@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        Simple data table
+    </header>
+
+    <!-- ---------------------- table ----------------- -->
+
+    <div class="wrapp">
+        <div class="table-wrapp">
+            <div class="sort-search-wrapp">
+                <div class="sort">
+                    <span id="btn-sort"> Reverse </span>
+                </div>
+                <div class="search">
+                    <input type="text" id="search-input">
+                    <span id="btn-search"> Search </span>
+                </div>
+            </div>
+
+            <div class="table"></div>
+
+            <div class="panel">
+                <div class="pagination">
+                    <p class="pag-btn" id="prev"><img
+                            src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-back-128.png"></p>
+                    <div class="limit">
+                        <ul></ul>
+                    </div>
+                    <p class="pag-btn" id="next"><img
+                            src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-forward-128.png">
+                    </p>
+                </div>
+                <div class="add-div">
+                    <button id="add">Add</button>
+                </div>
+                <div class="create-div">
+                    <button id="create">Create</button>
+                </div>
+                <div class="delete-div">
+                    <button id="delete">Delete</button>
+                </div>
+            </div>
+
+            <!-- --------------- modal ---------------------- -->
+
+        </div>
+        <div class="modal-wrapp modal-window hide">
+            <div class="modal">
+                <div class="modal-header">
+                    <h2>
+                    </h2>
+                </div>
+                <span class="btn-close">x</span>
+                <div class="input-wrapper">
+                    <div><span>Goods:</span><input type="text" class="inp-data" name="" id="goods"></div>
+                    <div><span>Price:</span><input type="text" class="inp-data" name="" id="price"></div>
+                    <div><span>Amount:</span><input type="text" class="inp-data" name="" id="amount"></div>
+                    <div><span>Country:</span><input type="text" class="inp-data" name="" id="country"></div>
+                    <div><span>1c_article:</span><input type="text" class="inp-data" name="" id="article"></div>
+                    <div><span>time Add:</span><input type="text" class="inp-data" name="" id="time"></div>
+                </div>
+                <div class="btn-wrapp"><button id="btn-add" class="btn-request" data-request="create">Add</button></div>
+                <div class="modal-footer"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/ajax.js"></script>
+    <script src="js/testResponseFromServer.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/chips.js"></script>
+</body>
+
+</html>
